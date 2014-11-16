@@ -1,0 +1,31 @@
+{
+  "name": "angular-coffee-seed",
+  "version": "0.0.0",
+  "repository": "https://github.com/murrayju/angular-coffee-seed",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "csso": "*",
+    "grunt-angular-templates": "*",
+    "grunt-bower-task": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-jslint": "*",
+    "grunt-karma": "*",
+    "grunt-npm-install": "*",
+    "grunt-processhtml": "*",
+    "karma-chrome-launcher": "*",
+    "karma-firefox-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-junit-reporter": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-requirejs": "*",
+    "less": "1",
+    "load-grunt-tasks": "*",
+    "requirejs": "*"
+  },
+  "engines": {
+    "node": ">=0.10.30"
+  }
+}
