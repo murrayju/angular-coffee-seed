@@ -127,7 +127,7 @@ module.exports = function (grunt) {
                     // list of files / patterns to load in the browser
                     files: [
                         'test/test-main.js',
-                        {pattern: 'test/**/*.js', included: false},
+                        {pattern: 'test/**/*', included: false},
                         {pattern: 'src/js/**/*', included: false},
                         {pattern: 'src/less/**/*', included: false},
                         {pattern: 'src/lib/**/*', included: false}

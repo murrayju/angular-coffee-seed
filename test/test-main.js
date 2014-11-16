@@ -4,7 +4,11 @@
 
     var allTestFiles = [],
         pathToModule = function (path) {
-            return path.replace(/^\/base\//, '../../').replace(/\.(js|coffee)$/, '');
+            var base = path.replace(/^\/base\//, '../../');
+            if (/\.coffee$/.test(base)) {
+                return 'cs!' + base.replace(/\.coffee$/, '');
+            }
+            return base.replace(/\.js$/, '');
         };
 
     Object.keys(window.__karma__.files).forEach(function (file) {
@@ -35,21 +39,10 @@
             underscore: "/base/src/lib/underscore/underscore",
             less: "/base/src/lib/require-less/less",
             lessc: "/base/src/lib/require-less/lessc",
-            normalize: "/base/src/lib/require-less/normalize"
+            normalize: "/base/src/lib/require-less/normalize",
+            cs: '/base/src/lib/require-cs/cs',
+            'coffee-script': '/base/src/lib/coffeescript/extras/coffee-script'
         },
-
-        packages: [
-            {
-                name: 'cs',
-                location: '/base/src/lib/require-cs',
-                main: 'cs'
-            },
-            {
-                name: 'coffee-script',
-                location: '/base/src/lib/coffeescript',
-                main: 'extras/coffee-script'
-            }
-        ],
 
         shim: {
             angular: {
